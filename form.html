@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>form</title>
+    <!--using external css -->
+    <link rel="stylesheet" href="form.css">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet">
+<script src="https://kit.fontawesome.com/a076d05399.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+  <div class="center">
+      <h1>Register Form</h1>
+  
+  <form method="post">
+      <div class="text-field">
+          <input type="text" required>
+          <label for="">username</label>
+          <span></span>
+      </div>
+      <div class="text-field">
+        <input type="password" required>
+        <label >password</label>
+        <span></span>
+        <span class="icon">
+          <i class="fa fa-eye" id="font" onclick="togglePW()" aria-hidden="true"></i>
+        </span>
+        <script>
+          function togglePW(){
+            var password = document.querySelector('[ name=password]')
+            if(passWord.getAttribute('type')==='password'){
+              passWord.setAttribute('type', 'text');
+              document.getElementById("font").style.color='black';
+            }
+
+
+            else{
+              passWord.setAttribute('type',  'password');
+              document.getElementById("font").style.color='white';
+            }
+          }
+        </script>  
+    </div>
+    <div class="pass"><a href="#">Forgot password?</a></div>
+    <a href="#">
+      <input type="submit" value="login" class="btn"> 
+    </a>
+    
+    <div class="signup_link">
+      <span>
+        Not a member?
+      </span>
+      <span class="sec">
+        <a href="#">signup</a>
+      </span>
+    </div>
+    
+    </div>
+  </form>
+</div>
+
+</body>
+</html>
